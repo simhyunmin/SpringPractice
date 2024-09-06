@@ -2,9 +2,9 @@ package com.example.demo.member;
 
 public class MemberServiceImpl implements MemberService {
 
-    private final MemberRepositoy memberRepositoy;
+    private final MemberRepository memberRepositoy;
 
-    public MemberServiceImpl(MemberRepositoy memberRepositoy) {
+    public MemberServiceImpl(MemberRepository memberRepositoy) {
         this.memberRepositoy = memberRepositoy;
     }
     //생성자 주입 , AppConfig가 대신 해준다.

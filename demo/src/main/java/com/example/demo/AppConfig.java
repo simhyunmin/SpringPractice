@@ -1,8 +1,7 @@
 package com.example.demo;
 import com.example.demo.discount.DiscountPolicy;
-import com.example.demo.discount.FixDiscountPolicy;
 import com.example.demo.discount.RateDiscountPolicy;
-import com.example.demo.member.MemberRepositoy;
+import com.example.demo.member.MemberRepository;
 import com.example.demo.member.MemberService;
 import com.example.demo.member.MemberServiceImpl;
 import com.example.demo.member.MemoryMemberRepository;
@@ -17,15 +16,15 @@ public class AppConfig {
 
     @Bean
     public MemberService memberService(){
-        return new MemberServiceImpl(memberRepositoy());
+        return new MemberServiceImpl(memberRepository());
     }
     @Bean
-    public MemberRepositoy memberRepositoy(){
+    public MemberRepository memberRepository(){
         return new MemoryMemberRepository();
     }
     @Bean
     public OrderService orderService(){
-        return new OrderServiceImpl(memberRepositoy(), discountPolicy());
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
     @Bean
     public DiscountPolicy discountPolicy(){

@@ -1,18 +1,15 @@
 package com.example.demo.order;
 
 import com.example.demo.discount.DiscountPolicy;
-import com.example.demo.discount.FixDiscountPolicy;
-import com.example.demo.discount.RateDiscountPolicy;
 import com.example.demo.member.Member;
-import com.example.demo.member.MemberRepositoy;
-import com.example.demo.member.MemoryMemberRepository;
+import com.example.demo.member.MemberRepository;
 
 public class OrderServiceImpl implements OrderService{
 
-    private final MemberRepositoy memberRepository;
+    private final MemberRepository memberRepository;
     private DiscountPolicy discountPolicy;
 
-    public OrderServiceImpl(MemberRepositoy memberRepositoy, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepositoy, DiscountPolicy discountPolicy) {
         this.discountPolicy = discountPolicy;
         this.memberRepository = memberRepositoy;
     }
