@@ -14,6 +14,7 @@ public class MemberApp {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         //Spring 컨테이너에 AppConfig에서 만들었던 객체들을 집어넣고 저장해주는 과정
+        //ApplicationContext가 스프링 컨테이너인 인터페이스이다.
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
         Member member = new Member(1L, "memberA", Grade.VIP);

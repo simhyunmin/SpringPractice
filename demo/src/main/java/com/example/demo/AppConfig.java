@@ -10,6 +10,7 @@ import com.example.demo.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+//팩토리 메소드를 통해 등록하는 방법
 @Configuration
 
 public class AppConfig {
