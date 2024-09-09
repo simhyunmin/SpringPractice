@@ -4,6 +4,7 @@ public class SingletonService {
     private static final SingletonService instance = new SingletonService();
     //내부적으로 자기자신을 생성해서 instance에 참조로 넣어 놓는다.
 
+
     public static SingletonService getInstance(){
         return instance;
     }
